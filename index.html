@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <form>
+        <input type="checkbox" name="color" value="red"/>c
+        <input type="checkbox" name="color" value="green"/>c++
+        <input type="checkbox" name="color" value="blue"/>java
+        <input type="checkbox" name="color" value="black"/>python
+        </form>
+        <p></p>
+       <script> 
+                 var count_Checked = function() {
+var n = $( "input:checked" ).length;
+$( "p" ).text( n + (n === 1 ? " is" : " are") + " checked." );
+};
+count_Checked();
+$("input[type=checkbox]" ).on( "click", count_Checked );
+       </script>
+</body>
+</html>
