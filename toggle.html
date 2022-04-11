@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("#btn").click(function(){
+            $("p").toggleClass("important");
+          });
+        });
+        </script>
+        <style>
+        .important {
+          color: rgb(255, 251, 0);
+        }
+        </style>
+</head>
+<body>
+    <h1>this is my webpage</h1>
+    <button id="btn" type="submit">toggle class</button>
+    <div class="header">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum sint ab voluptate recusandae magnam aliquid, voluptatum laborum sed corporis culpa nam eveniet soluta eius assumenda nihil obcaecati fugiat animi voluptatem.</p>
+    </div>
+    <div class="footer">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime doloremque ipsum sed qui temporibus beatae est quisquam odio sunt. Vero enim natus alias soluta repellat minima! Placeat nemo blanditiis veritatis?</p>
+    </div>
+    <div class="important"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora fugiat corrupti quaerat obcaecati suscipit ad, nobis ullam nulla. Iste accusamus modi, debitis porro dolor totam fugiat. Molestias amet repellendus quaerat.</p></div>
+</body>
+</html>
