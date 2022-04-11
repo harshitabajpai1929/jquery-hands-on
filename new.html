@@ -15,15 +15,46 @@
     <div class="header">hello header</div>
     <div class="middle">content</div>
     <div class="footer">hello footer</div>
+    <select type="dropdown" id="dropdown">
+        <option value="rajasthani" style="color: green; 
+        font-weight: 700;">rajasthani</option>
+        <option value="english" style="color: green; 
+                font-weight: 700;">english</option>
+        <option value="hindi" style="color: green; 
+                font-weight: 700;">hindi</option>
+        <option value="urdu" style="color: green; 
+                font-weight: 700;">urdu</option>
+    </select>
+    <input type="textbox" id="text" />
+    <input id="Button1" type="submit" value="button" />
+
 <script>
      $("#btn span").text("My NEW Text");
     
-    //  $(document).ready(function () {
-    //         $("div").click(function () {
-    //             var getClass = this.className;
-    //             console.log(getClass);
-    //         });
-    //     });
+     $(document).ready(function () {
+             $("div").click(function () {
+                 var getClass = this.className;
+                console.log(getClass);
+             });
+         });
+
+         $(document).ready(function() {
+
+
+$("#Button1").click(function() {
+
+
+    $('#dropdown').append($("<option>" + $('#text').val() + "</option>"));
+
+
+    return false;
+
+
+});
+
+
+});    
+
 </script>
 </body>
 </html>
