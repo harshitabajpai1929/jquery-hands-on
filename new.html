@@ -27,6 +27,26 @@
     </select>
     <input type="textbox" id="text" />
     <input id="Button1" type="submit" value="button" />
+    <br>
+    <table style="border: 1px solid dark grey;" id="myTable">
+        <tr>
+        <th>Year</th><br>
+        <th>savings</th>
+        </tr>
+        <tr>
+        <td>2014</td><br>
+        <td>rs 25000</td>
+        </tr>
+        <tr>
+        <td>2015</td><br>
+        <td>rs 45000</td>
+        </tr>
+        <tr>
+        <td>2016</td><br>
+        <td>rs 85000</td>
+        </tr>
+        </table>
+        <p> <input id="deletebtn" type="button" value="Click to delete all rows except first "/></p>
 
 <script>
      $("#btn span").text("My NEW Text");
@@ -39,22 +59,17 @@
          });
 
          $(document).ready(function() {
+          $("#Button1").click(function() {
+          $('#dropdown').append($("<option>" + $('#text').val() + "</option>"));
+         return false;
+       });
+        });    
 
-
-$("#Button1").click(function() {
-
-
-    $('#dropdown').append($("<option>" + $('#text').val() + "</option>"));
-
-
-    return false;
-
-
-});
-
-
-});    
-
+    $(document).ready(function(){
+        $('#deletebtn').click(function(){
+            $('#myTable').find("tr:gt(1)").remove();
+        });
+    });
 </script>
 </body>
 </html>
